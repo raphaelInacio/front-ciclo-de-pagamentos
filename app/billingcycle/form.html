@@ -1,11 +1,16 @@
 <div role="form">
     <div class="box-body">
-        <field id="name" label="Nome" grid="col-xs-12 col-sm-4" placeholder="Informe o nome"></field>
+        <field id="name" model="ctrl.billingCycle.name" readonly="ctrl.tabDelete"
+        label="Nome" grid="col-xs-12 col-sm-4" placeholder="Informe o nome"></field>
+        <field id="mes" model="ctrl.billingCycle.month" readonly="ctrl.tabDelete"
+        label="Mês" type="number" grid="col-xs-12 col-sm-4" placeholder="Informe o mês"></field>
+        <field id="ano" model="ctrl.billingCycle.year" readonly="ctrl.tabDelete"
+        label="Ano" type="number" grid="col-xs-12 col-sm-4" placeholder="Informe o ano"></field>
     </div>
     <div class="box-footer">
-        <button class="btn btn-primary">Incluir</button>
-        <button class="btn btn-info">Alterar</button>
-        <button class="btn btn-danger">Excluir</button>
-        <button class="btn btn-default">Cancelar</button>
+        <button class="btn btn-primary" ng-click="ctrl.create()" ng-if="ctrl.tabCreate" >Incluir</button>
+        <button class="btn btn-info" ng-click="ctrl.update()"  ng-if="ctrl.tabUpdate" >Alterar</button>
+        <button class="btn btn-danger" ng-click="ctrl.delete()" ng-if="ctrl.tabDelete" >Excluir</button>
+        <button class="btn btn-default" ng-click="ctrl.refresh()" >Cancelar</button>
     </div>
 </div>
