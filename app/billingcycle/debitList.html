@@ -1,0 +1,34 @@
+<div class="col-xs-12">
+    <table class="table">
+        <thead>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="debit in ctrl.billingCycle.debits">
+                <td>
+                    <input ng-model="debit.name" class="form-control" ng-readonly="ctrl.tabDelete" placeholder="Informe o nome">
+                </td>
+                <td>
+                    <input ng-model="debit.value" class="form-control" ng-readonly="ctrl.tabDelete" placeholder="Informe o valor" type="number">
+                </td>
+                <td>
+                    <input ng-model="debit.status" class="form-control" ng-readonly="ctrl.tabDelete" placeholder="Informe o status" type="number">
+                </td>
+                <td class="table-actions">
+                    <button type="" class="btn btn-success" ng-class="{disable: ctrl.tabDelete}">
+                     <i class="fa fa-plus"></i>
+                 </button>
+                    <button type="" class="btn btn-warning" ng-class="{disable: ctrl.tabDelete}">
+                     <i class="fa fa-clone"></i>
+                 </button>
+                    <button type="" class="btn btn-danger" ng-class="{disable: ctrl.tabDelete}">
+                     <i class="fa fa-trash-o"></i>
+                 </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
