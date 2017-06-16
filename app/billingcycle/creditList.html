@@ -11,16 +11,17 @@
                     <input ng-model="credit.name" class="form-control" ng-readonly="ctrl.tabDelete" placeholder="Informe o nome">
                 </td>
                 <td>
-                    <input ng-model="credit.value" class="form-control" ng-readonly="ctrl.tabDelete" placeholder="Informe o valor" type="number">
+                    <input ng-model="credit.value" class="form-control" 
+                      ng-change="ctrl.calculateValues()"   ng-readonly="ctrl.tabDelete" placeholder="Informe o valor" type="number">
                 </td>
                 <td class="table-actions">
-                    <button type="" class="btn btn-success" ng-class="{disable: ctrl.tabDelete}">
+                    <button type="" ng-disabled="ctrl.tabDelete"  class="btn btn-success" ng-click="ctrl.addCredit($index)" ng-class="{disable: ctrl.tabDelete}">
                      <i class="fa fa-plus"></i>
                  </button>
-                    <button type="" class="btn btn-warning" ng-class="{disable: ctrl.tabDelete}">
+                    <button type="" ng-disabled="ctrl.tabDelete" class="btn btn-warning" ng-click="ctrl.cloneCredit($index, credit)" ng-class="{disable: ctrl.tabDelete}">
                      <i class="fa fa-clone"></i>
                  </button>
-                    <button type="" class="btn btn-danger" ng-class="{disable: ctrl.tabDelete}">
+                    <button type="" ng-disabled="ctrl.tabDelete" class="btn btn-danger" ng-click="ctrl.deleteCredit($index)"  ng-class="{disable: ctrl.tabDelete}">
                      <i class="fa fa-trash-o"></i>
                  </button>
                 </td>

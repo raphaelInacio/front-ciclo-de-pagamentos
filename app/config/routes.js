@@ -6,7 +6,7 @@ angular.module('app').config([
             url : "/dashboard",
             templateUrl: "dashboard/dashboard.html"
         }).state('billingCycle', {
-            url : "/billing-cycle",
+            url : "/billing-cycle?page",
             templateUrl: "billingcycle/tabs.html"
         })
 

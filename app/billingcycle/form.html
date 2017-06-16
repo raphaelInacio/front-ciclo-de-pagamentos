@@ -8,6 +8,13 @@
         <field id="ano" model="ctrl.billingCycle.year" readonly="ctrl.tabDelete"
         label="Ano" type="number" grid="col-xs-12 col-sm-4" placeholder="Informe o ano"></field>
 
+        <div class="col-xs-12">
+            <fieldset>
+                <legend>Resumo</legend>
+                <div ng-include="'billingcycle/sumary.html'"></div>
+            </fieldset>    
+        </div>
+
         <div class="col-xs-12 col-sm-6">
             <fieldset>
                 <legend>Créditos</legend>
